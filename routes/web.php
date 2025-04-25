@@ -8,3 +8,7 @@ Route::get('/', function () {
 });
 
 Route::get('/listproduk', [ProductController::class, 'listproduk']);
+
+Route::get('/home', function () {
+    return view('pages.home');
+});
