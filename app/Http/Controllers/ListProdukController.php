@@ -10,8 +10,7 @@ class ListProdukController extends Controller
 {
     public function show()
     {
-        $data = Produk::where('harga', '>', 10000)->orderBy('harga', 'asc')->get();
-        
+        $data = Produk::get();
         foreach ($data as $produk) {
             $nama[] = $produk->nama;
             $desc[] = $produk->deskripsi;
